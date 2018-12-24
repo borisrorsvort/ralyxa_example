@@ -22,8 +22,8 @@ intent 'RequestTime' do
       line_id = first_passing_time.first['lineId']
       point['passingTimes'].first(2).each do |passing_time|
         # Check if they is deviation
-        if passing_time["message"]
-          time_difference << passing_time["message"]["fr"]
+        if passing_time['message']
+          time_difference << passing_time['message']['fr']
         else
           start_time = DateTime.now
           end_time = DateTime.parse(passing_time['expectedArrivalTime'])
